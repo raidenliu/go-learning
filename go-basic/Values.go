@@ -1,8 +1,8 @@
-package go_basic
+package main
 
 import "fmt"
 
-func Values() {
+func main() {
 
 	fmt.Println("go" + "lang")
 
