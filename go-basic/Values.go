@@ -1,14 +1,42 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 
-	fmt.Println("go" + "lang")
+	//1.变量不赋值时，有初始
+	//
+	//值
+	//2.变量不使用会报错
+	//3.变量不可以重复声明
+	var i int = 5
+	fmt.Println(i)
+	var str = "aaa"
+	fmt.Println(str)
+	a := 90
+	a = 5
+	fmt.Println(a)
 
-	fmt.Println("1+1 =", 1+1)
-	fmt.Println("7.0/3.0 =", 7.0/3.0)
-	fmt.Println(true && false)
-	fmt.Println(true || false)
-	fmt.Println(!true)
+	chInt := make(chan int, 2)
+
+	chInt <- 2
+	chInt <- 5
+
+	b := <-chInt
+	fmt.Println(b)
+
+	var fn func(i int) string
+
+	fn = func(i int) string {
+		return strconv.Itoa(i)
+	}
+	fmt.Println(fn(7))
+
+}
+
+func test() {
+
 }
