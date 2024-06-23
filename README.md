@@ -1,1 +1,1 @@
-init
+go learning
